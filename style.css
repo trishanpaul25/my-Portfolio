@@ -557,6 +557,37 @@ footer {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
+/* ─── Social Icons ─── */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+.social-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--border2);
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  text-decoration: none;
+  transition: border-color 0.3s, background 0.3s, color 0.3s, transform 0.3s;
+}
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.social-icon:hover {
+  border-color: var(--accent);
+  background: rgba(200, 184, 154, 0.1);
+  color: var(--accent2);
+  transform: translateY(-3px);
+}
+
 /* ─── Mobile ─── */
 @media (max-width: 900px) {
   nav { padding: 1.25rem 1.5rem; }
