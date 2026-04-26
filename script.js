@@ -1,14 +1,11 @@
-// ─── Custom Cursor ───
+// ─── Custom Cursor (desktop only) ───
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
+const isTouch = window.matchMedia('(hover: none) or (pointer: coarse)').matches;
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX;
-  my = e.clientY;
-});
-
-if (cursor) {
+if (!isTouch && cursor) {
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
   (function loop() {
     rx += (mx - rx) * 0.15;
     ry += (my - ry) * 0.15;
@@ -42,7 +39,7 @@ themeToggle.addEventListener('click', () => {
 
 // ─── Hamburger Menu ───
 const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('navLinks');
+const navLinks = document.getElementById('navLinks');
 const navOverlay = document.getElementById('navOverlay');
 
 function openMenu() {
@@ -60,14 +57,9 @@ function closeMenu() {
 }
 
 hamburger.addEventListener('click', () => {
-  if (hamburger.classList.contains('open')) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
+  hamburger.classList.contains('open') ? closeMenu() : openMenu();
 });
 
-// Close on Escape
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
 });
@@ -81,7 +73,7 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
 reveals.forEach(el => observer.observe(el));
 
@@ -89,19 +81,5 @@ reveals.forEach(el => observer.observe(el));
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.hero .reveal').forEach(el => {
     setTimeout(() => el.classList.add('in'), 150);
-  });
-});
-
-// ─── Mobile Touch Fix for Work Cards ───
-// On mobile, tapping a work card opens GitHub link
-document.querySelectorAll('.work-card').forEach(card => {
-  card.addEventListener('click', function(e) {
-    // If they clicked a button inside, let it handle itself
-    if (e.target.closest('.work-btn')) return;
-    // Otherwise find the GitHub button and follow it
-    const githubBtn = card.querySelector('.work-btn');
-    if (githubBtn && githubBtn.href && githubBtn.href !== '#') {
-      window.open(githubBtn.href, '_blank');
-    }
   });
 });
