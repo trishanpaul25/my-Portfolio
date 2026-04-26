@@ -126,6 +126,7 @@ nav.scrolled {
   width: 70vw; height: 90vh;
   background: radial-gradient(ellipse at 60% 40%, rgba(200,184,154,0.05) 0%, transparent 65%);
   pointer-events: none;
+  z-index: -1;
 }
 .hero-label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
 .hero-label::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
@@ -224,7 +225,7 @@ section { padding: 7rem 3rem; }
 /* ─── Work / Projects ─── */
 .work-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; }
 .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-.work-card { border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 16/10; background: var(--card); border: 1px solid var(--border); cursor: none; }
+.work-card { border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 16/10; background: var(--card); border: 1px solid var(--border); cursor: pointer; }
 .work-card:nth-child(1) { grid-row: span 2; aspect-ratio: unset; }
 .work-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; transition: transform 0.7s ease; }
 .work-placeholder-inner { text-align: center; }
@@ -340,7 +341,7 @@ footer { padding: 3rem; border-top: 1px solid var(--border); display: flex; alig
   gap: 5px;
   width: 40px; height: 40px;
   background: var(--bg3); border: 1px solid var(--border2);
-  border-radius: 10px; cursor: none; padding: 0;
+  border-radius: 10px; cursor: pointer; padding: 0;
   transition: border-color 0.2s;
 }
 .hamburger:hover { border-color: var(--accent); }
@@ -428,4 +429,23 @@ footer { padding: 3rem; border-top: 1px solid var(--border); display: flex; alig
   body { cursor: auto; }
   .cursor, .cursor-ring { display: none; }
   .nav-links li:not(:last-child) { display: flex; }
+
+  /* Make work card overlay always visible on mobile (no hover) */
+  .work-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 55%, transparent 100%);
+  }
+
+  /* Make all buttons/links tappable */
+  .btn-primary, .btn-secondary, .work-btn, .cert-link,
+  .social-icon, .skill-card, .cert-card, .testi-card,
+  .nav-cta, .theme-toggle, .hamburger, .footer-links a {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(200,184,154,0.15);
+  }
+
+  /* Larger tap targets */
+  .btn-primary, .btn-secondary { padding: 1rem 2rem; }
+  .work-btn { padding: 0.6rem 1.1rem; }
+  .social-icon { width: 56px; height: 56px; }
 }

@@ -91,3 +91,17 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => el.classList.add('in'), 150);
   });
 });
+
+// ─── Mobile Touch Fix for Work Cards ───
+// On mobile, tapping a work card opens GitHub link
+document.querySelectorAll('.work-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    // If they clicked a button inside, let it handle itself
+    if (e.target.closest('.work-btn')) return;
+    // Otherwise find the GitHub button and follow it
+    const githubBtn = card.querySelector('.work-btn');
+    if (githubBtn && githubBtn.href && githubBtn.href !== '#') {
+      window.open(githubBtn.href, '_blank');
+    }
+  });
+});
