@@ -26,6 +26,21 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
+// ─── Theme Toggle ───
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
 // ─── Scroll Reveal ───
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
@@ -35,13 +50,13 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 reveals.forEach(el => observer.observe(el));
 
-// ─── Hero Reveals Immediately on Load ───
+// ─── Hero Reveals on Load ───
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.hero .reveal').forEach(el => {
-    setTimeout(() => el.classList.add('in'), 100);
+    setTimeout(() => el.classList.add('in'), 150);
   });
 });

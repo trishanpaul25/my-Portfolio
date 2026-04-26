@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trishan-Portfolio</title>
+  <title>Trishan Paul — Full-Stack & AI/ML Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -17,38 +17,47 @@
   <nav id="nav">
     <a href="#" class="nav-logo">Trishan Paul</a>
     <ul class="nav-links">
-      <li><a href="#services">Skills</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#work">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact" class="nav-cta">Let's talk</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-icon dark-icon">🌙</span>
+      <span class="theme-icon light-icon">☀️</span>
+    </button>
   </nav>
 
   <!-- ─── Hero ─── -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <div class="hero-label reveal">Available for opportunities</div>
+      <div class="hero-label reveal">Available for Opportunities</div>
       <h1 class="hero-title reveal reveal-delay-1">
-        Aspiring AI Engineer<br>
-        & Developer<br>
-        <em></em>
+        Trishan<br>Paul
       </h1>
-      <p class="hero-desc reveal reveal-delay-2">
-        I build scalable web applications and explore AI/ML to solve real-world problems.
+      <p class="hero-tagline reveal reveal-delay-2">
+        I don't just build websites — <em>I build things that think.</em>
       </p>
-      <a href="#work" class="btn-primary reveal reveal-delay-3">
-        View my work
-      </a>
-
+      <p class="hero-desc reveal reveal-delay-2">
+        Crafting fast, modern web experiences with React & Next.js — and making them smarter with Python, TensorFlow & PyTorch.
+      </p>
+      <div class="hero-btns reveal reveal-delay-3">
+        <a href="#work" class="btn-primary">
+          View Projects
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn-secondary">Get in touch</a>
+      </div>
       <div class="hero-stats reveal reveal-delay-4">
         <div>
           <div class="stat-num">2+</div>
-          <div class="stat-label">Years learning</div>
+          <div class="stat-label">Years Learning</div>
         </div>
         <div class="stat-sep"></div>
         <div>
           <div class="stat-num">5+</div>
-          <div class="stat-label">Projects built</div>
+          <div class="stat-label">Projects Built</div>
         </div>
         <div class="stat-sep"></div>
         <div>
@@ -58,157 +67,307 @@
       </div>
     </div>
 
-    <div class="hero-image-wrap reveal reveal-delay-2">
-  <img src="Port-photo.jpeg" alt="Trishan Paul" class="hero-portrait-photo">
-  <div class="hero-badge">
-    <div class="badge-dot"></div>
-    <div class="badge-text">Open to work</div>
-  </div>
-</div>
+    <!-- Animated Code Window -->
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="code-window">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename">trishan.py</span>
+        </div>
+        <div class="code-body">
+          <div class="code-line"><span class="kw">class</span> <span class="cls">TrishanPaul</span>:</div>
+          <div class="code-line indent"><span class="kw">def</span> <span class="fn">__init__</span>(self):</div>
+          <div class="code-line indent2"><span class="var">self</span>.name = <span class="str">"Trishan Paul"</span></div>
+          <div class="code-line indent2"><span class="var">self</span>.role = <span class="str">"Full-Stack + AI/ML"</span></div>
+          <div class="code-line indent2"><span class="var">self</span>.stack = {</div>
+          <div class="code-line indent3"><span class="str">"web"</span>: [<span class="str">"React"</span>, <span class="str">"Next.js"</span>, <span class="str">"Node"</span>],</div>
+          <div class="code-line indent3"><span class="str">"ai"</span>: [<span class="str">"PyTorch"</span>, <span class="str">"TensorFlow"</span>],</div>
+          <div class="code-line indent3"><span class="str">"data"</span>: [<span class="str">"Pandas"</span>, <span class="str">"NumPy"</span>]</div>
+          <div class="code-line indent2">}</div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line indent"><span class="kw">def</span> <span class="fn">get_status</span>(self):</div>
+          <div class="code-line indent2"><span class="kw">return</span> <span class="str">"Open to work 🚀"</span></div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line"><span class="cm"># Let's build something smart</span></div>
+          <div class="code-line"><span class="var">dev</span> = <span class="cls">TrishanPaul</span>()</div>
+          <div class="code-line"><span class="var">dev</span>.get_status()<span class="cursor-blink">▋</span></div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <div class="badge-dot"></div>
+        <div class="badge-text">Open to work</div>
+      </div>
+    </div>
   </section>
 
   <!-- ─── Marquee ─── -->
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <div class="marquee-item">DSA <span class="marquee-dot"></span></div>
-      <div class="marquee-item">Web Development <span class="marquee-dot"></span></div>
-      <div class="marquee-item">Machine Learning <span class="marquee-dot"></span></div>
-      <div class="marquee-item">AI <span class="marquee-dot"></span></div>
-      <div class="marquee-item">React <span class="marquee-dot"></span></div>
+      <div class="marquee-item">React.js <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Next.js <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Node.js <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Python <span class="marquee-dot"></span></div>
+      <div class="marquee-item">TensorFlow <span class="marquee-dot"></span></div>
+      <div class="marquee-item">PyTorch <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Scikit-Learn <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Pandas <span class="marquee-dot"></span></div>
+      <div class="marquee-item">NumPy <span class="marquee-dot"></span></div>
+      <div class="marquee-item">React.js <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Next.js <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Node.js <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Python <span class="marquee-dot"></span></div>
+      <div class="marquee-item">TensorFlow <span class="marquee-dot"></span></div>
+      <div class="marquee-item">PyTorch <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Scikit-Learn <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Pandas <span class="marquee-dot"></span></div>
+      <div class="marquee-item">NumPy <span class="marquee-dot"></span></div>
     </div>
   </div>
 
-  <!-- ─── Services (Skills) ─── -->
-  <section id="services">
-    <div class="section-tag reveal">My Skills</div>
-    <h2 class="section-title reveal reveal-delay-1">What I <em>know</em></h2>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-num">01</div>
-        <div class="service-name">Data Structures & Algorithms</div>
-        <p class="service-desc">Strong foundation in problem solving, graphs, trees, and optimization.</p>
+  <!-- ─── Skills ─── -->
+  <section id="skills">
+    <div class="section-tag reveal">What I know</div>
+    <h2 class="section-title reveal reveal-delay-1">My <em>tech stack</em></h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚛️</div>
+        <div class="skill-category">Frontend</div>
+        <div class="skill-tags">
+          <span>React.js</span><span>Next.js</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Tailwind</span>
+        </div>
       </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-num">02</div>
-        <div class="service-name">Web Development</div>
-        <p class="service-desc">Building responsive applications using React, Next.js, and modern CSS.</p>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">🖥️</div>
+        <div class="skill-category">Backend</div>
+        <div class="skill-tags">
+          <span>Node.js</span><span>Express</span><span>REST APIs</span><span>MongoDB</span><span>SQL</span>
+        </div>
       </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-num">03</div>
-        <div class="service-name">AI / Machine Learning</div>
-        <p class="service-desc">Working with Scikit-learn, TensorFlow, and exploring LLMs.</p>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">🤖</div>
+        <div class="skill-category">AI / ML</div>
+        <div class="skill-tags">
+          <span>Python</span><span>TensorFlow</span><span>PyTorch</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-icon">🛠️</div>
+        <div class="skill-category">Tools & DevOps</div>
+        <div class="skill-tags">
+          <span>Git</span><span>GitHub</span><span>VS Code</span><span>Jupyter</span><span>Linux</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Work ─── -->
-  <section id="work">
+  <!-- ─── Projects ─── -->
+  <section id="work" style="padding-top: 0;">
     <div class="work-header">
       <div>
-        <div class="section-tag reveal">Projects</div>
-        <h2 class="section-title reveal reveal-delay-1">My <em>work</em></h2>
+        <div class="section-tag reveal">Portfolio</div>
+        <h2 class="section-title reveal reveal-delay-1" style="margin-bottom: 0;">Selected <em>projects</em></h2>
       </div>
     </div>
-
     <div class="work-grid">
       <div class="work-card reveal">
-        <div class="work-placeholder">DSA Visualizer</div>
+        <div class="work-placeholder wc1">
+          <div class="work-placeholder-inner"><div class="wp-icon">🌐</div><div class="wp-title">Project One</div></div>
+        </div>
         <div class="work-overlay">
           <div class="work-meta">
-            <div class="work-cat">Algorithms</div>
-            <div class="work-name">DSA Visualizer</div>
+            <div class="work-cat">React.js · Node.js</div>
+            <div class="work-name">Project One</div>
+            <p class="work-desc">Add your project description here.</p>
+            <div class="work-btns">
+              <a href="#" class="work-btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="work-btn work-btn-primary" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
       <div class="work-card reveal reveal-delay-1">
-        <div class="work-placeholder">ML Model</div>
+        <div class="work-placeholder wc2">
+          <div class="work-placeholder-inner"><div class="wp-icon">🤖</div><div class="wp-title">Project Two</div></div>
+        </div>
         <div class="work-overlay">
           <div class="work-meta">
-            <div class="work-cat">Machine Learning</div>
-            <div class="work-name">Prediction Model</div>
+            <div class="work-cat">Python · TensorFlow</div>
+            <div class="work-name">Project Two</div>
+            <p class="work-desc">Add your project description here.</p>
+            <div class="work-btns">
+              <a href="#" class="work-btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="work-btn work-btn-primary" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
       <div class="work-card reveal reveal-delay-2">
-        <div class="work-placeholder">Portfolio</div>
+        <div class="work-placeholder wc3">
+          <div class="work-placeholder-inner"><div class="wp-icon">📊</div><div class="wp-title">Project Three</div></div>
+        </div>
         <div class="work-overlay">
           <div class="work-meta">
-            <div class="work-cat">Web Development</div>
-            <div class="work-name">Portfolio Website</div>
+            <div class="work-cat">Python · Pandas · ML</div>
+            <div class="work-name">Project Three</div>
+            <p class="work-desc">Add your project description here.</p>
+            <div class="work-btns">
+              <a href="#" class="work-btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="work-btn work-btn-primary" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-card reveal reveal-delay-3">
+        <div class="work-placeholder wc4">
+          <div class="work-placeholder-inner"><div class="wp-icon">⚡</div><div class="wp-title">Project Four</div></div>
+        </div>
+        <div class="work-overlay">
+          <div class="work-meta">
+            <div class="work-cat">Next.js · Node.js</div>
+            <div class="work-name">Project Four</div>
+            <p class="work-desc">Add your project description here.</p>
+            <div class="work-btns">
+              <a href="#" class="work-btn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="work-btn work-btn-primary" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ─── Certificates ─── -->
+  <section id="certificates" class="process-section">
+    <div class="section-tag reveal">Proof of work</div>
+    <h2 class="section-title reveal reveal-delay-1">Courses & <em>Certificates</em></h2>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon">🎓</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Coursera / Google</div>
+          <div class="cert-name">Certificate Name Here</div>
+          <div class="cert-date">2024</div>
+        </div>
+        <a href="#" target="_blank" class="cert-link">View <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-icon">🤖</div>
+        <div class="cert-body">
+          <div class="cert-issuer">DeepLearning.AI</div>
+          <div class="cert-name">Certificate Name Here</div>
+          <div class="cert-date">2024</div>
+        </div>
+        <a href="#" target="_blank" class="cert-link">View <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-icon">⚛️</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Udemy / freeCodeCamp</div>
+          <div class="cert-name">Certificate Name Here</div>
+          <div class="cert-date">2024</div>
+        </div>
+        <a href="#" target="_blank" class="cert-link">View <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="cert-card reveal reveal-delay-3">
+        <div class="cert-icon">📊</div>
+        <div class="cert-body">
+          <div class="cert-issuer">Kaggle / IBM</div>
+          <div class="cert-name">Certificate Name Here</div>
+          <div class="cert-date">2024</div>
+        </div>
+        <a href="#" target="_blank" class="cert-link">View <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+    <p class="cert-note reveal">Replace placeholders above with your actual certificate names, issuers, years and links.</p>
   </section>
 
   <!-- ─── About ─── -->
   <section id="about" class="about-band">
-    <div class="about-img-side reveal">Trishan</div>
+    <div class="about-img-side reveal">
+      <div class="about-visual">
+        <div class="av-ring av-ring1"></div>
+        <div class="av-ring av-ring2"></div>
+        <div class="av-ring av-ring3"></div>
+        <div class="av-center">TP</div>
+        <div class="av-orbit av-orbit1"><div class="av-planet">⚛️</div></div>
+        <div class="av-orbit av-orbit2"><div class="av-planet">🤖</div></div>
+        <div class="av-orbit av-orbit3"><div class="av-planet">🐍</div></div>
+      </div>
+    </div>
     <div>
       <div class="section-tag reveal">About me</div>
-      <h2 class="about-large reveal reveal-delay-1">Building skills that <em>matter</em></h2>
+      <h2 class="about-large reveal reveal-delay-1">Why hire me over <em>others?</em></h2>
       <p class="about-body reveal reveal-delay-2">
-  Hi, I'm Trishan Paul — an Information Technology student at Heritage Institute of Technology, Kolkata. I’m passionate about web development, data structures, and AI/ML, and I enjoy building projects that solve real-world problems while continuously improving my skills.
-</p>
+        Hi, I'm Trishan Paul — an aspiring Full-Stack Developer and AI/ML Engineer. I'm rare because I bridge two worlds: I build beautiful, fast web apps <em>and</em> make them intelligent with machine learning.
+      </p>
+      <p class="about-body reveal reveal-delay-2" style="margin-bottom: 2rem;">
+        Most developers do one or the other. I do both — which means I can take a product from a raw idea all the way to a deployed, data-driven application without needing a separate team.
+      </p>
+      <a href="#contact" class="btn-primary reveal reveal-delay-3">
+        Work with me
+        <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </section>
 
   <!-- ─── CTA ─── -->
   <section id="contact" class="cta-section">
     <div class="section-tag reveal">Get in touch</div>
-    <h2 class="cta-title reveal reveal-delay-1">Let's build something <em>great</em></h2>
-    <a href="mailto:hello@alexmercer.com" class="btn-primary reveal reveal-delay-3">
-  Start a project
-  <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</a>
-
-<div class="social-icons reveal reveal-delay-4">
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/trishan-paul-0497b428b/" target="_blank" class="social-icon" aria-label="LinkedIn">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-      <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-    </svg>
-  </a>
-  <!-- GitHub -->
-  <a href="https://github.com/trishanpaul25" target="_blank" class="social-icon" aria-label="GitHub">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-    </svg>
-  </a>
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/trished_25" target="_blank" class="social-icon" aria-label="Instagram">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-    </svg>
-  </a>
-  <!-- Gmail -->
-  <a href="mailto:trishanpaul25@gmail.com" class="social-icon" aria-label="Gmail">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
-    </svg>
-  </a>
-</div>
-    <!--<a href="mailto:trishanpaul8@gmail.com" class="btn-primary reveal reveal-delay-3">
-      Contact Me
-    </a>-->
+    <h2 class="cta-title reveal reveal-delay-1">Let's build something<br><em>intelligent</em></h2>
+    <p class="cta-sub reveal reveal-delay-2">Open to internships, freelance projects, and full-time roles in web development or AI/ML.</p>
+    <a href="mailto:YOUR-EMAIL@gmail.com" class="btn-primary reveal reveal-delay-3">
+      Say Hello
+      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="social-icons reveal reveal-delay-4">
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/trishanpaul25" target="_blank" class="social-icon" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" class="social-icon" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="mailto:YOUR-EMAIL@gmail.com" class="social-icon" aria-label="Gmail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
   </section>
 
   <!-- ─── Footer ─── -->
   <footer>
     <div class="footer-logo">Trishan Paul</div>
     <div class="footer-links">
-      <a href="#services">Skills</a>
+      <a href="#skills">Skills</a>
       <a href="#work">Projects</a>
+      <a href="#certificates">Certificates</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
